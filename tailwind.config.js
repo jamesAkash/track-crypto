@@ -7,6 +7,7 @@ export default {
       light: "#cbd5e1",
       white: "#e5e7eb",
       red: "#b91c1c",
+      green: "#22c55e",
     },
     extend: {},
   },

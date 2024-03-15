@@ -5,7 +5,6 @@ import CoinCard from "../components/CoinCard";
 
 const Home = () => {
   const data = useLoaderData();
-  const navigation = useNavigation();
   const {
     totalCoins,
     totalMarkets,
@@ -16,9 +15,6 @@ const Home = () => {
     newestCoins,
     bestCoins,
   } = data.data;
-  console.log(Array.isArray(newestCoins));
-  console.log(newestCoins.map((el) => el));
-  if (navigation === "loading") return <h1>LOADING...</h1>;
 
   if (data?.data)
     return (

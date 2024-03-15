@@ -40,7 +40,7 @@ const Home = () => {
 
         <div className="mt-8">
           <h1 className="text-xl font-semibold">Best Coins</h1>
-          <section className="flex  gap-10 mt-4 flex-nowrap overflow-x-scroll">
+          <section className="flex  gap-10 mt-4 flex-nowrap mb-20 overflow-x-scroll">
             {bestCoins.map((el) => {
               return <CoinCard coin={el} key={el.uuid} />;
             })}

@@ -15,7 +15,7 @@ const Header = () => {
       <menu className="space-x-4 flex md:space-x-6 text-sm  md:text-lg">
         <LinkButton to="/" content="Dashboard" />
         <LinkButton to="/crypto" content="Cryptocurrencies" />
-        <LinkButton to="/exchanges" content="Exchanges" />
+        {/* <LinkButton to="/exchanges" content="Exchanges" /> */}
       </menu>
     </header>
   );

@@ -4,12 +4,19 @@ import { fetchCoins } from "../slice/coinSlice";
 import CryptoCard from "../../components/CryptoCard";
 const CryptoCurrencies = () => {
   const dispatch = useDispatch();
-  const { coins } = useSelector((store) => store.coin.coins);
+  const { coins, status, error } = useSelector((store) => store.coin.coins);
   console.log(coins);
 
   useEffect(() => {
     dispatch(fetchCoins());
   }, []);
+
+  if (!coins)
+    return (
+      <h1 className="text-center mt-20 text-4xl text-green font-semibold">
+        Loading...
+      </h1>
+    );
 
   return (
     <main className="mt-10">
@@ -17,7 +24,7 @@ const CryptoCurrencies = () => {
         Find all Active Crypto currencies
       </h1>
       <div className="flex flex-wrap gap-8 justify-center">
-        {coins.map((coin) => (
+        {coins?.map((coin) => (
           <CryptoCard key={coin.uuid} coin={coin} />
         ))}
       </div>
